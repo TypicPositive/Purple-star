@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Custom styling for the product slider */
+.product_slider {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure each product takes equal width */
+.owl-item {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto; /* Prevents the slides from wrapping */
+  padding: 0 10px; /* Adjust padding if needed */
+}
+
+/* Style for slider navigation buttons */
+.product_slider_nav {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.product_slider_nav_left {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.product_slider_nav_right {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Optional: Style the section title */
+.new_arrivals_title {
+  margin-bottom: 30px;
+}
