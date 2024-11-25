@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+		th:replace="base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Register</title>
+    
+   
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+
+</head>
+
+
+<body>
+<section class="banner d-flex justify-content-center align-items-center">
+
+<div class="container text-center" style="margin-top:200px">
+    <div class="forms-container">
+
+
+        <!-- User Login Form -->
+        <div class="login-form text-center">
+            <h2>User Login</h2>
+            <form action="" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" name="login" class="btn">Login</button>
+                <p class="toggle-form" href="/register">Don't have an account? <a href="/register">Register here</a></p>
+                <p class="toggle-form">Admin? <span id="switch-to-admin">Login as Admin</span></p>
+            </form>
+        </div>
+
+        <!-- Admin Login Form -->
+        <div class="admin-login-form" style="display: none;">
+            <h2>Admin Login</h2>
+            <form action="" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" name="admin_login" class="btn">Login as Admin</button>
+                <p class="toggle-form">Go back to <span id="switch-to-user-login">User Login</span></p>
+            </form>
+        </div>
+
+        <!-- Register Form -->
+        <div class="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form action="" method="POST">
+                <div class="input-group">
+                    <input type="text" name="fullname" placeholder="Full Name" required />
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" name="repeat_password" placeholder="Repeat Password" required />
+                </div>
+                <button type="submit" name="register" class="btn">Register</button>
+                <p class="toggle-form">Already have an account? <span id="switch-to-user-login">User Login</span></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+</section>
+</body>
+</html>

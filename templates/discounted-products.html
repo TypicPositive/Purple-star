@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Discounted Products</title>
+</head>
+<body>
+    <h1>Discounted Products</h1>
+    <ul>
+        <li th:each="product : ${products}">
+            <span th:text="${product.name}"></span> - 
+            <span th:text="${product.discount}"></span>% off
+        </li>
+    </ul>
+</body>
+</html>
